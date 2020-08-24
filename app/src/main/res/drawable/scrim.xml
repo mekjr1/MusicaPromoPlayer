@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~ Created by Abdul Gafar Manuel Mequei on 20-08-2020 19:55 for NM Technology Services & Solution
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-08-2020 19:55
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="90"
+        android:endColor="@android:color/transparent"
+        android:startColor="@android:color/black"/>
+</shape>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoreMusics"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:weightSum="1">
+
+    <FrameLayout
+
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/idScrollbar"
+        android:layout_weight="0.8"
+        android:layout_below="@+id/idSearchView"
+        >
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/main_swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idAllSongs"
+                android:background="@color/backgroundColor">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ProgressBar
+            android:id="@+id/main_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <include layout="@layout/error_layout"/>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/idControlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_weight="0.1">
+
+        <ImageView
+            android:id="@+id/id_selected_track_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.2"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/id_selected_track_title"
+            android:paddingLeft="8dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:layout_weight="0.6"/>
+
+        <ImageView
+            android:id="@+id/id_player_control"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.2"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/idLinksLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idRecents"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/idRecentsImage"
+                android:background="@drawable/icon_recents"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/idRecentsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recents"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idQueue"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/idQueueImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_queue"/>
+
+            <TextView
+                android:id="@+id/idQueueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Queue"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idMyPlaylists"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/idMyPlaylistsImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_playlist"/>
+
+            <TextView
+                android:id="@+id/idMyPlaylistsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playlists"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idUpdates"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/idUpdatesImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_updates"
+                />
+
+            <TextView
+                android:id="@+id/idUpdatesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Updates"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

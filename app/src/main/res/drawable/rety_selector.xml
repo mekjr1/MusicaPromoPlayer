@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~ Created by Abdul Gafar Manuel Mequei on 20-08-2020 16:49 for NM Technology Services & Solution
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-08-2020 16:49
+  -->
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_retry_round_selected" android:state_selected="true"></item>
+    <item android:drawable="@drawable/shape_retry_round_selected" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/shape_retry_round"></item>
+</selector>
